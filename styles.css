@@ -1,7 +1,7 @@
 * { margin:0; padding:0; }
 
 html {
-    background-image: url("./squaredots.svg");
+    background-image: url("./img/squaredots.svg");
     background-size: 10px;
     background-color: var(--background);
     backdrop-filter: opacity(10%) hue-rotate(120deg);
