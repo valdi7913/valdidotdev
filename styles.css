@@ -1,0 +1,156 @@
+* { margin:0; padding:0; }
+
+html {
+    background-image: url("./squaredots.svg");
+    background-size: 10px;
+    background-color: var(--background);
+    backdrop-filter: opacity(10%) hue-rotate(120deg);
+}
+
+a {
+    color: var(--text-color);
+    font-style: italic;
+}
+
+
+#projects {scroll-behavior: smooth;}
+
+.download {
+    padding: var(--spacing);
+    background: var(--silver);
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+body{
+    margin: var(--spacing) auto;
+    max-width: var(--max-width);
+    line-height:1.6;
+    font-family: "IBM Plex Mono", monospace;
+    font-size:24px;
+    color: var(--text-color);
+    padding: var(--spacing);
+    background: var(--background);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: var(--border-radius);
+}
+
+header, nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0 var(--spacing);
+}
+
+section {
+    margin: var(--section-margin) 0;
+}
+
+footer {
+    margin: var(--spacing) 0;
+}
+
+li { list-style-type: none;}
+h1,h2,h3 {line-height:1.6}
+
+h1 {
+    font-size: 40px; 
+    margin: var(--spacing) 0;
+}
+
+#hero {
+    margin: 40px 0;
+    height: 70vh;
+}
+
+.column {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.project:hover {
+    background-color: darkblue;
+    cursor: pointer;
+}
+
+.me {
+    border-radius: var(--border-radius);
+    object-position: 45% 55%;
+    display: block;
+    object-fit:cover;
+    max-width: var(--half-of-max-width);
+    overflow: hidden;
+    padding: var(--spacing);
+}
+
+.hbox {
+    display:flex;
+    justify-content: space-between;
+    gap: var(--spacing);
+}
+.vbox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.item, .project {
+    display: flex;
+    flex:1;
+    /* max-width: var(--half-of-max-width); */
+    flex-direction: column;
+    border: solid 5px var(--silver);
+    border-radius: var(--border-radius);
+    padding: var(--spacing);
+    /* background: var(--silver); */
+    backdrop-filter: blur(10px);
+
+    min-width: var(--half-of-max-width);
+}
+
+.project {
+    align-items: center;
+}
+
+.project-image {
+    max-width: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    background-color: blue;
+}
+
+.icon {
+    filter: grayscale();
+    width: 3rem;
+    transition: transform 0.5s ease-in-out;
+}
+.icon:hover {
+        filter: none
+}
+
+.start {
+    justify-content: start;
+    align-items: center;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flip {
+    filter: brightness(0) invert(1);
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(180deg);
+}

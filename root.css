@@ -1,0 +1,7 @@
+:root {
+    --spacing: 20px;
+    --border-radius: 15px;
+    --max-width: 800px;
+    --half-of-max-width: calc(var(--max-width)/2 - 3 * var(--spacing));
+    --section-margin: 100px;
+}
