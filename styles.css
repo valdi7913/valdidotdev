@@ -1,4 +1,4 @@
-* { margin:0; padding:0; scroll-behavior: smooth;   transition: all 0.5s ease;}
+* { margin:0; padding:0; scroll-behavior: smooth;   transition: all 0.5s ease-in-out;}
 
 html {
     background-image: url("./img/squaredots.svg");
@@ -61,7 +61,6 @@ h1 {
     margin: 0 0 var(--spacing) 0;
 }
 
-header > h1 { margin: 0;}
 
 button, .github-button{
   display:flex;
@@ -115,7 +114,7 @@ button:hover {
 
 .me {
     align-self: end;
-    animation: appear 1s ease-out;
+    animation: appear 2s ease-in-out;
     border-radius: var(--border-radius);
     object-position: 45% 55%;
     width:100%;
@@ -167,13 +166,6 @@ button:hover {
     background-color: var(--card-background);
 }
 
-.project:hover {
-    cursor: pointer;
-    filter: none;
-    max-height: none;
-    transition: 1s;
-}
-
 .project-image {
     width: 100%;
     aspect-ratio: 1.5;
@@ -189,18 +181,12 @@ button:hover {
 
 .icon {
     width: 4rem;
-    transition: transform 0.5s ease-in-out;
     filter: none;
 }
 
 .start {
     justify-content: start;
     align-items: center;
-}
-
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .labels {
@@ -222,7 +208,7 @@ button:hover {
   width: 35px; /* Adjust the width and height as needed */
   height: 35px;
   border-radius: var(--border-radius); /* Makes the element round */
-  border: 1px solid var(--text-color); /* White border */
+  border: 3px solid var(--text-color); /* White border */
   overflow: hidden; /* Clips the image to the rounded shape */
 }
 
@@ -232,15 +218,14 @@ button:hover {
   }
 }
 
-/* Apply the jumping effect to the section when it's in focus */
 .jumping-effect > h1, .jumping-effect > h2{
   animation: jump 1s ease-in-out 1;
 }
 
 .js {
+  color:#444;
   background: #f7df1e;
   border-color: #e1ca1b;
-  color:black;
 }
 
 .css {
@@ -250,21 +235,25 @@ button:hover {
 }
 
 .react {
+  color: #444;
   background: #61DBFC;
   border-color: #3E8BA0;
 }
 
 .firebase {
+  color: #444;
   background: #FFCB2C;
   border-color:#FEA510;
 }
 
 .express {
+  color: white;
   background: #323230;
   border-color: #222221;
 }
 
 .psql {
+  color:white;
   background: #356790;
   border-color: black;
 }
