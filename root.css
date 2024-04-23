@@ -1,7 +1,20 @@
 :root {
     --spacing: 20px;
+    --spacing-small: 10px;
     --border-radius: 15px;
+    --border-radius-small: 10px;
+    --border-width: 1px;
+    --max-width: 1000px;
+    --half-of-max-width: calc(var(--max-width)/2 - 3* var(--spacing));
+    --section-margin: 150px;
+
+    --font-size-big: 40px;
+    --font-size: 24px;
+    --font-size-small: 20px;
+}
+
+@media(min-width: 800px) {
+  :root {
     --max-width: 800px;
-    --half-of-max-width: calc(var(--max-width)/2 - 3 * var(--spacing));
-    --section-margin: 100px;
+  }
 }

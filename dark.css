@@ -1,7 +1,22 @@
 :root{
-    --black: #030204ff;
-    --background: rgb(65, 63, 58);
-    --jet: #333332ff;
-    --silver: #B8B5B2ff;
-    --text-color: #ffffff;
+    --background: rgb(58, 60, 65);
+    --dot-background: rgba(58, 60, 65);
+    --text-color: #fff;
+    --card-background: rgb(86, 90, 99);
+}
+
+.flip {
+    filter: brightness(0) invert(1);
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(180deg) scale(0.8);
+}
+
+.down-arrow {
+  margin: 0 auto;
+  filter: brightness(0) invert(1);
+  transform: rotate(180deg);
+}
+
+.github-button .icon {
+  filter: brightness(0) invert(1);
 }

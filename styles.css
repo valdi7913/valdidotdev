@@ -1,40 +1,41 @@
-* { margin:0; padding:0; }
+* { margin:0; padding:0; scroll-behavior: smooth;   transition: all 0.5s ease;}
 
 html {
     background-image: url("./img/squaredots.svg");
     background-size: 10px;
-    background-color: var(--background);
-    backdrop-filter: opacity(10%) hue-rotate(120deg);
+    background-color: var(--dot-background)
 }
 
 a {
-    color: var(--text-color);
-    font-style: italic;
+  color: var(--text-color);
 }
 
+.sidenav {
+  position: fixed;
+  left:calc(var(--half-of-max-width)/10);
+}
 
-#projects {scroll-behavior: smooth;}
+@media only screen and (max-width:1200px) {
+  .sidenav{
+    opacity: 0;
+  }
+}
 
-.download {
-    padding: var(--spacing);
-    background: var(--silver);
-    color: white;
-    font-size: 24px;
-    border: none;
-    border-radius: var(--border-radius);
+nav > a {
+    font-style: italic;
 }
 
 body{
     margin: var(--spacing) auto;
     max-width: var(--max-width);
-    line-height:1.6;
+    line-height: 1.6;
     font-family: "IBM Plex Mono", monospace;
-    font-size:24px;
+    font-size: var(--font-size);
     color: var(--text-color);
     padding: var(--spacing);
     background: var(--background);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: var(--border-radius);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
 header, nav {
@@ -44,7 +45,7 @@ header, nav {
     gap: 0 var(--spacing);
 }
 
-section {
+section{
     margin: var(--section-margin) 0;
 }
 
@@ -56,37 +57,87 @@ li { list-style-type: none;}
 h1,h2,h3 {line-height:1.6}
 
 h1 {
-    font-size: 40px; 
-    margin: var(--spacing) 0;
+    font-size: var(--font-size-big); 
+    margin: 0 0 var(--spacing) 0;
+}
+
+header > h1 { margin: 0;}
+
+button, .github-button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border: solid var(--border-width) var(--text-color);
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  padding: var(--spacing-small);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+button:hover {
+	background-color: var(--text-color);
+	color: var(--background);
+}
+
+.github-button > .icon{
+  height: var(--spacing);
+}
+
+.github-button:hover > .icon{
+  filter: invert();
+}
+.github-button:hover {
+  background-color: var(--text-color);
+  color: var(--background);
 }
 
 #hero {
-    margin: 40px 0;
-    height: 70vh;
+  margin: 40px 0;
+  height: 70vh;
 }
 
 .column {
     display:flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     width: 100%;
     height: 100%;
 }
 
-.project:hover {
-    background-color: darkblue;
-    cursor: pointer;
+@keyframes appear{
+  0%   { opacity: 0%;  }
+  50%  { opacity: 0%;  }
+  100% { opacity: 100%;}
 }
 
 .me {
+    align-self: end;
+    animation: appear 1s ease-out;
     border-radius: var(--border-radius);
     object-position: 45% 55%;
-    display: block;
-    object-fit:cover;
-    max-width: var(--half-of-max-width);
+    width:100%;
     overflow: hidden;
-    padding: var(--spacing);
+    border: var(--border-width) solid var(--text-color);
+}
+
+@media screen and (max-width:800px) {
+  #hero {
+    margin-bottom: var(--section-margin);
+
+  }
+
+  .me {
+    height: 50vh;
+    object-fit: cover;
+    object-position: 50% 10%;
+  }
+
+  .down-arrow {
+    display: none;
+  }
 }
 
 .hbox {
@@ -94,6 +145,7 @@ h1 {
     justify-content: space-between;
     gap: var(--spacing);
 }
+
 .vbox {
     display: flex;
     flex-direction: column;
@@ -101,56 +153,124 @@ h1 {
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--half-of-max-width)), 1fr));
+    grid-gap: var(--spacing);
 }
 
 .item, .project {
     display: flex;
-    flex:1;
-    /* max-width: var(--half-of-max-width); */
     flex-direction: column;
-    border: solid 5px var(--silver);
-    border-radius: var(--border-radius);
     padding: var(--spacing);
-    /* background: var(--silver); */
-    backdrop-filter: blur(10px);
-
-    min-width: var(--half-of-max-width);
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--text-color);
+    background-color: var(--card-background);
 }
 
-.project {
-    align-items: center;
+.project:hover {
+    cursor: pointer;
+    filter: none;
+    max-height: none;
+    transition: 1s;
 }
 
 .project-image {
-    max-width: 250px;
-    max-height: 250px;
+    width: 100%;
+    aspect-ratio: 1.5;
     object-fit: cover;
-    background-color: blue;
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--text-color);
+}
+
+.project > p, #about > p {
+  font-size: var(--font-size-small);
+  margin: var(--spacing) 0;
 }
 
 .icon {
-    filter: grayscale();
-    width: 3rem;
+    width: 4rem;
     transition: transform 0.5s ease-in-out;
-}
-.icon:hover {
-        filter: none
+    filter: none;
 }
 
 .start {
     justify-content: start;
     align-items: center;
 }
+
 .wrap {
     display: flex;
     flex-wrap: wrap;
 }
 
-.flip {
-    filter: brightness(0) invert(1);
-    transition: transform 0.5s ease-in-out;
-    transform: rotate(180deg);
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
+  align-items: start;
+}
+
+.label {
+  font-size: var(--font-size-small);
+  border-radius: var(--border-radius-small);
+  border: var(--border-width) solid;
+  padding: 0 var(--spacing-small);
+  color: var(--text-color);
+}
+
+.language {
+  width: 35px; /* Adjust the width and height as needed */
+  height: 35px;
+  border-radius: var(--border-radius); /* Makes the element round */
+  border: 1px solid var(--text-color); /* White border */
+  overflow: hidden; /* Clips the image to the rounded shape */
+}
+
+@keyframes jump {
+  50% {
+    color: var(--background);
+  }
+}
+
+/* Apply the jumping effect to the section when it's in focus */
+.jumping-effect > h1, .jumping-effect > h2{
+  animation: jump 1s ease-in-out 1;
+}
+
+.js {
+  background: #f7df1e;
+  border-color: #e1ca1b;
+  color:black;
+}
+
+.css {
+  color: white;
+  background: #2859EA;
+  border-color: #0E1D57;
+}
+
+.react {
+  background: #61DBFC;
+  border-color: #3E8BA0;
+}
+
+.firebase {
+  background: #FFCB2C;
+  border-color:#FEA510;
+}
+
+.express {
+  background: #323230;
+  border-color: #222221;
+}
+
+.psql {
+  background: #356790;
+  border-color: black;
+}
+
+.node {
+  color: white;
+  background:#8BC402;
+  border-color: #4F7100;
 }
