@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script defer src="./scripts/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/root.css" />
+  <link rel="stylesheet" type="text/css" href="./styles/light.css" id="light"/>
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+  <title>Valdi.dev</title>
+</head>
+
+<body>
+  <nav class="sidenav vbox">
+    <a href="#home"> Heim </a>
+    <a href="#projects"> Verkefni </a>
+    <a href="#about"> Um mig </a>
+    <a href="#skills"> Hæfni </a>
+    <a href="#contact"> Hafðu samband </a>
+  </nav>
+  <header id="home">
+    <h1>Valdi.dev</h1>
+    <nav class="hbox start">
+      <a href="./index.html">
+        <img class="language icon" src="./img/unionjack.png">
+      </a>
+      <label id="mode">
+        <img class="icon flip" src="./img/eclipse.png">
+      </label>
+    </nav>
+  </header>
+  <section id="hero" class="grid hbox">
+    <div class="column">
+      <div class="vbox">
+        <h1>Halló!</h1>
+        <p>Ég heiti Valdi.</p>
+        <p>Ég er Full-Stack forritari.</p>
+      </div>
+      <div class="vbox">
+        <p>
+          Skoðaðu <a href="#projects">Verkefnin mín</a>
+        </p>
+        <p>eða</p>
+        <p>
+          Lestu <a href="#about">um mig</a>
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <img class="me" src="./img/valdi-cropped.jpg" />
+    </div>
+  </section>
+  <a href="#projects" class="hbox">
+    <img href="#projects" src="./img/upload.png" class="down-arrow" style="width:50px; aspect-ratio: 2;">
+  </a>
+  <section id="projects">
+    <h1>Verkefni</h1>
+    <div class="grid">
+      <div class="project">
+        <img class="project-image" src="./img/valdidotdev.png" alt="">
+        <h2>Valdi.dev</h2>
+        <div class="labels">
+          <div class="label js">Javascript</div>
+          <div class="label css">CSS</div>
+        </div>
+        <p> Persónulega vefsíðan mín</p>
+        <a class="github-button" href="https://github.com/valdi7913/valdidotdev.git"> 
+        <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+          Github 
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <h1>Um mig</h1>
+    <p>
+      Ég er 23 ára gamall full stack forritari
+    </p>
+    <p>
+      Ég elska einfaldar og minimalískar lausnir á flóknum vandamálum.
+    </p>
+    <p>
+      Ég hef forritað í yfir 4 ár og er með BSc í hugbúnaðarverkfræði frá Háskóla Íslands
+    </p>
+    <p>
+      Skoðaðu ferilskránna mína
+    </p>
+    <form>
+      <button class="download" onclick="window.open('./img/CV_Valdimars_Arnar.pdf')" type="submit">Skoða ferilskrá</button>
+    </form>
+  </section>
+  <section id="skills">
+    <h1>Hæfni</h1>
+    <div class="grid">
+      <div class="vbox item">
+        <h2>Forritunarmál</h2>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+          <p> Typescript </p>
+        </div>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+          <p> Javascript </p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+          <p> Java </p>
+        </div>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+          <p> Python </p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/latex/latex-original.svg" />
+          <p> LaTex </p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+          <p> C# </p>
+        </div>
+      </div>
+      <div class="vbox item">
+        <h2>Hugbúnaður</h2>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vim/vim-original.svg" />
+          <p> Vim</p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+          <p> Bash </p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+          <p> Git </p>
+        </div>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" />
+          <p> Firebase </p>
+        </div>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+          <p> Postgresql </p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+          <p> React </p>
+        </div>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" />
+          <p> Node </p>
+        </div>
+      </div>
+      <div class="vbox item">
+        <h2>Áhugamál</h2>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" />
+          <p> Rust </p>
+        </div>
+        <div class="hbox">
+          <img class="icon"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/neovim/neovim-original.svg" />
+          <p> Neovim </p>
+        </div>
+        <div class="hbox">
+          <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" />
+          <p> Godot </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer id="contact" class="vbox">
+    <h2> Hafðu samband: </h2>
+    <div class="hbox start">
+      <img class="icon" src="./img/gmail.png" alt="Email">
+      <a href="mailto:valdi7913@gmail.com">valdi7913@gmail.com</a>
+    </div>
+    <div class="hbox start">
+      <img class="icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+      <a href="https://github.com/valdi7913">valdi7913</a>
+    </div>
+    <div class="hbox start">
+      <img class="icon"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
+      <a href="https://www.linkedin.com/in/valdimar-%C3%B6rn-sverrisson-42000828a/">Valdimar Örn Sverrisson</a>
+    </div>
+  </footer>
+</body>
+</html>
