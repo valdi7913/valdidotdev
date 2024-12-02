@@ -1,4 +1,4 @@
-* { margin:0; padding:0; scroll-behavior: smooth;   transition: all 0.5s ease-in-out;}
+* { margin:0; padding:0; scroll-behavior: smooth;}
 
 html {
     background-image: url("./img/squaredots.svg");
@@ -177,6 +177,10 @@ button:hover {
 .project > p, #about > p {
   font-size: var(--font-size-small);
   margin: var(--spacing) 0;
+}
+
+.project {
+  justify-content: space-between;
 }
 
 .icon {
